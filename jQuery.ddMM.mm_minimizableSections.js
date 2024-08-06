@@ -1,8 +1,8 @@
 /**
  * jQuery.ddMM.mm_minimizableSections
- * @version 1.1.2 (2023-06-06)
+ * @version 1.1.3 (2024-08-06)
  * 
- * @copyright 2016–2023
+ * @copyright 2016–2024
  */
 
 (function($){
@@ -18,7 +18,7 @@ $.ddMM.mm_minimizableSections = {
 	
 	/**
 	 * @method init
-	 * @version 1.0.1 (2023-06-05)
+	 * @version 1.0.2 (2024-08-06)
 	 * 
 	 * @desc Initialization.
 	 * 
@@ -31,7 +31,7 @@ $.ddMM.mm_minimizableSections = {
 		var _this = this;
 		
 		if (!_this.inited){
-			//Minimize by default
+			// Minimize by default
 			$('.' + _this.defaults.classNames.header)
 				.filter(params.minimizedByDefault)
 				.addClass(_this.defaults.classNames.minimized)
@@ -44,11 +44,11 @@ $.ddMM.mm_minimizableSections = {
 
 /**
  * jQuery.fn.mm_minimizableSections
- * @version 1.1.2 (2023-06-06)
+ * @version 1.1.3 (2024-08-06)
  * 
  * @uses jQuery.ddMM.mm_minimizableSections
  * 
- * @copyright 2016
+ * @copyright 2016–2024
  */
 $.fn.mm_minimizableSections = function(params){
 	var
@@ -59,7 +59,7 @@ $.fn.mm_minimizableSections = function(params){
 	$this.each(function(){
 		let $this = $(this);
 		
-		//If the widget was not applied for this section before
+		// If the widget was not applied for this section before
 		if (!$this.hasClass(_this.defaults.classNames.header)){
 			$this
 				.addClass(_this.defaults.classNames.header)

@@ -11,12 +11,12 @@
  */
 
 function mm_minimizableSections($params = []){
-	//For backward compatibility
+	// For backward compatibility
 	if (
 		!is_array($params) &&
 		!is_object($params)
 	){
-		//Convert ordered list of params to named
+		// Convert ordered list of params to named
 		$params = \ddTools::orderedParamsToNamed([
 			'paramsList' => func_get_args(),
 			'compliance' => [
@@ -28,7 +28,7 @@ function mm_minimizableSections($params = []){
 		]);
 	}
 	
-	//Defaults
+	// Defaults
 	$params = \DDTools\ObjectTools::extend([
 		'objects' => [
 			(object) [
@@ -65,7 +65,7 @@ function mm_minimizableSections($params = []){
 			$widgetDir . 'jQuery.ddMM.mm_minimizableSections.js',
 			'html',
 			'jQuery.ddMM.mm_minimizableSections.js',
-			'1.1.2'
+			'1.1.3'
 		);
 		
 		$modx->Event->output($output);
@@ -87,7 +87,7 @@ function mm_minimizableSections($params = []){
 		);
 		
 		$output .= '
-//ManagerManager.mm_minimizableSections
+// ManagerManager.mm_minimizableSections
 $j("' . implode(',', $params->sections) . '", "#documentPane").mm_minimizableSections({
 	minimizedByDefault: "' . implode(',', $params->minimizedByDefault) . '"
 });
@@ -99,7 +99,7 @@ $j("' . implode(',', $params->sections) . '", "#documentPane").mm_minimizableSec
 
 /**
  * mm_minimizableSections_prepareSectionHeaderSelector
- * @version 1.0.3 (2023-06-05)
+ * @version 1.0.4 (2024-08-06)
  * 
  * @param $sectionId {string} — Section name. @required
  * 
@@ -114,7 +114,7 @@ function mm_minimizableSections_prepareSectionHeaderSelector($sectionId){
 		break;
 		
 		case '':
-		//For backward compatibility
+		// For backward compatibility
 		case '*':
 			$result = '.sectionHeader';
 		break;
